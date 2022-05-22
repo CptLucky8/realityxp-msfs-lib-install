@@ -198,7 +198,7 @@ Function PromptYesNo {
     )
     if ($Box -or $psISE) {
         # "ReadKey" not supported in PowerShell ISE.
-        $result = Show-MessageBox($Msg, 'Select an option...')
+        $result = Show-MessageBox -Msg $Msg -Title 'Select an option...'
         if ($result -ne [System.Windows.MessageBoxResult]::Yes) { return $false }
         return $true
     }
